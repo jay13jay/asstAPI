@@ -1,0 +1,32 @@
+name: Diagram export
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'diag/**'
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+      - name: Build generator
+        run: |
+          go build -o ./bin/diag-generator ./docs/diagrams/generator
+      - name: Run generator (example)
+        run: |
+          ./bin/diag-generator --prompt "L2 container from docs/c4/L2-container.md" --out docs/diagrams/asstBackend-l2-containers.drawio --dry-run=false
+      - name: Commit generated files
+        run: |
+          git config user.name "diag-bot"
+          git config user.email "diag-bot@example.com"
+          git add docs/diagrams/*.drawio docs/diagrams/*.meta.md || true
+          git commit -m "chore(diagrams): generated diagram" || echo "no changes"
+          git push origin HEAD:${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
