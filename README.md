@@ -155,9 +155,17 @@ Delete a message.
 This project uses the C4 framework for architectural documentation:
 
 - **[L1 Context](docs/c4/L1-context.md)**: System landscape and external dependencies
-- **[L2 Container](docs/c4/L2-container.md)**: High-level architecture (TODO)
-- **[L3 Component](docs/c4/L3-component.md)**: Detailed component breakdown (TODO)
-- **[L4 Code](docs/c4/L4-code.md)**: Implementation specifications (TODO)
+  - 📊 [Diagram](docs/diagrams/asstBackend-l1-context.drawio) | [View Online](https://app.diagrams.net/?lightbox=1#Uhttps://raw.githubusercontent.com/jay13jay/asstAPI/main/docs/diagrams/asstBackend-l1-context.drawio)
+- **[L2 Container](docs/c4/L2-container.md)**: High-level architecture
+  - 📊 [Diagram](docs/diagrams/asstBackend-l2-containers.drawio) | [View Online](https://app.diagrams.net/?lightbox=1#Uhttps://raw.githubusercontent.com/jay13jay/asstAPI/main/docs/diagrams/asstBackend-l2-containers.drawio)
+- **[L3 Component](docs/c4/L3-component.md)**: Detailed component breakdown
+  - 📊 [Diagram](docs/diagrams/asstBackend-l3-components.drawio) | [View Online](https://app.diagrams.net/?lightbox=1#Uhttps://raw.githubusercontent.com/jay13jay/asstAPI/main/docs/diagrams/asstBackend-l3-components.drawio)
+- **[L4 Code](docs/c4/L4-code.md)**: Implementation specifications
+  - 📊 [Diagram](docs/diagrams/asstBackend-l4-code.drawio) | [View Online](https://app.diagrams.net/?lightbox=1#Uhttps://raw.githubusercontent.com/jay13jay/asstAPI/main/docs/diagrams/asstBackend-l4-code.drawio)
+
+### Architecture Diagrams
+
+Visual representations of the architecture are available in the [docs/diagrams](docs/diagrams/) directory. All diagrams are editable in [diagrams.net](https://app.diagrams.net) and can be regenerated from the C4 documentation.
 
 ### Node Traversal Algorithm
 
