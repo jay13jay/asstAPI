@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram id="diagram-1" name="Page-1">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="node://external/frontend-app" value="Web Frontend
+[Single Page App]" style="rounded=1;fillColor=#666666;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="320" y="30" width="160" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://container/api-gateway" value="API Gateway
+[Go + Gin]
+
+HTTP REST API, routing, middleware" style="rounded=1;fillColor=#0b5fff;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="180" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://container/postgresql" value="PostgreSQL
+[Database]
+
+Users, chats, messages" style="shape=cylinder;fillColor=#2b6cb0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="100" y="350" width="160" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://external/llm-providers" value="LLM Providers
+[External API]
+
+OpenAI, Anthropic" style="rounded=1;fillColor=#10B981;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="350" width="180" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://container/redis-cache" value="Redis Cache
+[Cache]
+
+Sessions, rate limiting" style="shape=cylinder;fillColor=#DC2626;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="320" y="500" width="160" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--external/frontend-app-to-node--container/api-gateway" style="rounded=0;endArrow=block;" edge="1" parent="1" source="node://external/frontend-app" target="node://container/api-gateway">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--container/api-gateway-to-node--container/postgresql" style="rounded=0;" edge="1" parent="1" source="node://container/api-gateway" target="node://container/postgresql">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--container/api-gateway-to-node--external/llm-providers" style="rounded=0;dashed=1;" edge="1" parent="1" source="node://container/api-gateway" target="node://external/llm-providers">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--container/api-gateway-to-node--container/redis-cache" style="rounded=0;dashed=1;" edge="1" parent="1" source="node://container/api-gateway" target="node://container/redis-cache">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

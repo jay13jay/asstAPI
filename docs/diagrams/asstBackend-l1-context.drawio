@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram id="diagram-1" name="Page-1">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="node://system/asstbackend-api" value="asstBackend API
+[Software System]
+
+Provides chat-based AI assistant interactions" style="rounded=1;fillColor=#0b5fff;fontColor=#ffffff;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="200" width="200" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://actor/end-users" value="End Users" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="100" y="50" width="40" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://actor/developers" value="Developers" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="350" y="50" width="40" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://actor/system-admins" value="System Admins" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="600" y="50" width="40" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://external/openai-gpt" value="OpenAI GPT
+[LLM Provider]" style="shape=cylinder;fillColor=#10B981;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="150" y="400" width="150" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://external/postgresql" value="PostgreSQL
+[Database]" style="shape=cylinder;fillColor=#2b6cb0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="350" y="400" width="150" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://external/redis-cache" value="Redis Cache
+[Cache Layer]" style="shape=cylinder;fillColor=#DC2626;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="550" y="400" width="150" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--actor/end-users-to-node--system/asstbackend-api" style="rounded=0;endArrow=block;" edge="1" parent="1" source="node://actor/end-users" target="node://system/asstbackend-api">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--actor/developers-to-node--system/asstbackend-api" style="rounded=0;endArrow=block;" edge="1" parent="1" source="node://actor/developers" target="node://system/asstbackend-api">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--actor/system-admins-to-node--system/asstbackend-api" style="rounded=0;endArrow=block;" edge="1" parent="1" source="node://actor/system-admins" target="node://system/asstbackend-api">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--system/asstbackend-api-to-node--external/openai-gpt" style="rounded=0;dashed=1;" edge="1" parent="1" source="node://system/asstbackend-api" target="node://external/openai-gpt">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--system/asstbackend-api-to-node--external/postgresql" style="rounded=0;dashed=1;" edge="1" parent="1" source="node://system/asstbackend-api" target="node://external/postgresql">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--system/asstbackend-api-to-node--external/redis-cache" style="rounded=0;dashed=1;" edge="1" parent="1" source="node://system/asstbackend-api" target="node://external/redis-cache">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

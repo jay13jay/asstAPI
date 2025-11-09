@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram id="diagram-1" name="Page-1">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="node://api-group/auth" value="Auth APIs" style="rounded=1;fillColor=#E5E7EB;strokeColor=#6B7280;fontColor=#1F2937;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="220" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://endpoint/post-auth-register" value="POST /auth/register" style="rounded=0;fillColor=#0b5fff;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://endpoint/post-auth-login" value="POST /auth/login" style="rounded=0;fillColor=#0b5fff;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="140" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://api-group/chats" value="Chats APIs" style="rounded=1;fillColor=#E5E7EB;strokeColor=#6B7280;fontColor=#1F2937;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="50" width="220" height="340" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://endpoint/post-chats" value="POST /chats" style="rounded=0;fillColor=#0b5fff;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="310" y="80" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://endpoint/get-chats" value="GET /chats" style="rounded=0;fillColor=#0b5fff;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="310" y="140" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://endpoint/get-chats-id" value="GET /chats/{id}" style="rounded=0;fillColor=#0b5fff;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="310" y="200" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://endpoint/put-chats-id" value="PUT /chats/{id}" style="rounded=0;fillColor=#0b5fff;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="310" y="260" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://endpoint/delete-chats-id" value="DELETE /chats/{id}" style="rounded=0;fillColor=#0b5fff;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="310" y="320" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://api-group/messages" value="Messages APIs" style="rounded=1;fillColor=#E5E7EB;strokeColor=#6B7280;fontColor=#1F2937;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="50" width="220" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://endpoint/post-chats-id-messages" value="POST /chats/{id}/messages" style="rounded=0;fillColor=#0b5fff;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="80" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://endpoint/get-chats-id-messages" value="GET /chats/{id}/messages" style="rounded=0;fillColor=#0b5fff;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="140" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://model/user" value="User
+[Data Model]" style="rounded=0;fillColor=#F59E0B;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="100" y="400" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://model/chat" value="Chat
+[Data Model]" style="rounded=0;fillColor=#F59E0B;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="350" y="400" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://model/message" value="Message
+[Data Model]" style="rounded=0;fillColor=#F59E0B;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="400" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="node://schema/database-schema" value="PostgreSQL Schema
+users | chats | messages" style="shape=cylinder;fillColor=#2b6cb0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="300" y="550" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--model/user-to-node--schema/database-schema" style="rounded=0;dashed=1;" edge="1" parent="1" source="node://model/user" target="node://schema/database-schema">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--model/chat-to-node--schema/database-schema" style="rounded=0;dashed=1;" edge="1" parent="1" source="node://model/chat" target="node://schema/database-schema">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge://node--model/message-to-node--schema/database-schema" style="rounded=0;dashed=1;" edge="1" parent="1" source="node://model/message" target="node://schema/database-schema">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
